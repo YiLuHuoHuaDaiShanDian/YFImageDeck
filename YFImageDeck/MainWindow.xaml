@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:YFImageDeck"
+        xmlns:local="clr-namespace:YFImageDeck" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="YFImageDeck" Height="450" Width="800"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        MouseMove="Window_MouseMove"
+        MouseLeftButtonUp="Window_MouseLeftButtonUp"
+        PreviewMouseWheel="Window_PreviewMouseWheel">
     <Grid>
-
+        <Image x:Name="MainImage"
+               Stretch="Uniform"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <!-- 缩放和平移变换 -->
+                <TransformGroup>
+                    <ScaleTransform x:Name="ImageScaleTransform" ScaleX="1" ScaleY="1"/>
+                    <TranslateTransform x:Name="ImageTranslateTransform" X="0" Y="0"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
