@@ -30,7 +30,7 @@ namespace YFImageDeck
             // 获取命令行参数
             string[] args = Environment.GetCommandLineArgs();
 #if DEBUG
-            args = new string[] { args[0], @"C:\Users\Administrator\Desktop\untitled.png" };
+            args = new string[] { args[0], @"E:\TIM图片20181010125129.jpg" };
 #endif
 
             // 如果有文件路径参数，加载对应的图片
